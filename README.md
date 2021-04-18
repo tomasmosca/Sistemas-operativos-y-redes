@@ -97,4 +97,5 @@ Prueba de escritorio en pseudocódigo y explicación de funciones se encuentra e
 
 **Código**:
 Para compilar: `gcc subwayArgento.c -o ejecutable -lpthread`
+
 Para ejecutar: `./ejecutable`
