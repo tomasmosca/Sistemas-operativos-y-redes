@@ -1,0 +1,79 @@
+T1(ejecutarReceta)
+T2(ejecutarReceta)
+T3(ejecutarReceta)
+T4(ejecutarReceta)
+
+ejecutarReceta() (con los hilos que realizan acciones)
+   t1(cortar)
+   t2(mezclar)
+   t3(salar)
+   t4(agregar)
+   t5(empanar)
+   t6(cocinar)
+   t7(hornear)
+   t8(cortaExtras)
+   t9(armar)
+
+cortar()
+  cortar
+  v(sem_mezclar)
+
+p(sem_mezclar)
+  mezclar
+  v(sem_salar)
+
+p(sem_salar)
+  mutex()
+  salar
+  v(sem_agregar)
+  mutex()
+
+p(sem_agregar)
+  agregar
+  v(sem_empanar)
+
+p(sem_empanar)
+  empanar
+  v(sem_cocinar)
+
+p(sem_cocinar)
+  mutex()
+  cocinar
+  v(sem_hornear)
+  mutex()
+
+p(sem_hornear)
+  mutex()
+  hornear
+  v(sem_cortaExtras)
+  mutex()
+
+p(sem_cortaExtras)
+  cortarExtras
+  v(sem_armar)
+
+p(sem_armar)
+  armar
+  fin
+
+
+sem_agregar =      0 0 1 0 0 0 0 0
+sem_mezclar =      1 0 0 0 0 0 0 0 
+sem_salar =        0 1 0 0 0 0 0 0
+sem_hornear =      0 0 0 0 0 1 0 0
+sem_cocinar =      0 0 0 0 1 0 0 0
+sem_empanar =      0 0 0 1 0 0 0 0
+sem_armar =        0 0 0 0 0 0 0 1
+sem_cortaExtras =  0 0 0 0 0 0 1 0
+
+Se comienza creando 4 hilos que representan 4 equipos, estos ejecutan la funcion ejecutarReceta la cual
+crea 9 hilos y cada uno se le asigna una accion diferente.
+
+primero se comienza por la funcion cortar() la cual imprime la accion cortar y luego da señal 
+al semaforo mezclar y este pasa a estar en 1 y los demas en 0, luego pasa a la funcion mezclar la
+cual imprime la accion mezclar, se reduce a 0 el semaforo y luega da señal al semaforo salar y esta 
+pasa a ser 1. durante la funcion salar se inicia un mutex para que solo un hilo la ejecute a la vez.. se
+imprime la accion salar, se reduce el semaforo a 0 y luego da señal al semaforo agregar y este pasa a ser
+1. y asi hasta llegar al armado del sandwich como se puede ver en el cuadro de arriba. Las funciones
+salar,hornear y cocinar solo se pueden ejecutar por un hilo a la vez. Cuando se llega a la funcion
+armar se termina el programa y se imprime el equipo ganador.
