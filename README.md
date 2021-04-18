@@ -93,7 +93,7 @@ sem_empanar =      0 0 0 1 0 0 0 0
 sem_armar =        0 0 0 0 0 0 0 1
 sem_cortaExtras =  0 0 0 0 0 0 1 0
 ```
-Prueba de escritorio en pseudocódigo y explicación de funciones se encuentra en el archivo : **PseudocodigoTPSOR.txt**
+Prueba de escritorio en pseudocódigo y explicación de funciones se encuentra en el archivo : **Pseudocodigo.txt**
 
 **Código**:
 
