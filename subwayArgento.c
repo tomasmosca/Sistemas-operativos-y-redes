@@ -378,31 +378,31 @@ int main ()
 {
 
 	//creo los nombres de los equipos
-	int rc;
-	int *equipoNombre1 =malloc(sizeof(*equipoNombre1));
-	int *equipoNombre2 =malloc(sizeof(*equipoNombre2));
-	int *equipoNombre3 =malloc(sizeof(*equipoNombre3));
-	int *equipoNombre4 =malloc(sizeof(*equipoNombre4));
+     int rc;
+     int *equipoNombre1 =malloc(sizeof(*equipoNombre1));
+     int *equipoNombre2 =malloc(sizeof(*equipoNombre2));
+     int *equipoNombre3 =malloc(sizeof(*equipoNombre3));
+     int *equipoNombre4 =malloc(sizeof(*equipoNombre4));
   
-	*equipoNombre1 = 1;
-	*equipoNombre2 = 2;
-	*equipoNombre3 = 3;
-	*equipoNombre4 = 4;
+     *equipoNombre1 = 1;
+     *equipoNombre2 = 2;
+     *equipoNombre3 = 3;
+     *equipoNombre4 = 4;
 
 	//inicializo los mutex
-	pthread_mutex_init(&lock, NULL);
-	pthread_mutex_init(&lock1, NULL);
-	pthread_mutex_init(&lock2, NULL);
-	pthread_mutex_init(&lock3, NULL);
+     pthread_mutex_init(&lock, NULL);
+     pthread_mutex_init(&lock1, NULL);
+     pthread_mutex_init(&lock2, NULL);
+     pthread_mutex_init(&lock3, NULL);
 
 	//creo las variables de los hilos de los equipos
-	pthread_t equipo1; 
-	pthread_t equipo2;
-	pthread_t equipo3;
-	pthread_t equipo4;
+     pthread_t equipo1; 
+     pthread_t equipo2;
+     pthread_t equipo3;
+     pthread_t equipo4;
 
 	//abro el archivo para la salida de competencia
-	fptr = fopen("competencia.txt", "w");
+    fptr = fopen("competencia.txt", "w");
   
 	//inicializo los hilos de los equipos
     rc = pthread_create(&equipo1,                           //identificador unico
@@ -415,15 +415,15 @@ int main ()
                                 ejecutarReceta,             //funcion a ejecutar
                                 equipoNombre2);
 
-	rc = pthread_create(&equipo3,
-	                        NULL,
-							    ejecutarReceta,
-								equipoNombre3);
+   rc = pthread_create(&equipo3,
+	                       NULL,
+				               ejecutarReceta,
+				               equipoNombre3);
 
-	rc = pthread_create(&equipo4,
-	                        NULL,
-							    ejecutarReceta,
-								equipoNombre4);
+   rc = pthread_create(&equipo4,
+	                      NULL,
+				              ejecutarReceta,
+				              equipoNombre4);
 
    if (rc){
        printf("Error:unable to create thread, %d \n", rc);
