@@ -96,6 +96,7 @@ sem_cortaExtras =  0 0 0 0 0 0 1 0
 Prueba de escritorio en pseudocódigo y explicación de funciones se encuentra en el archivo : **PseudocodigoTPSOR.txt**
 
 **Código**:
+
 Para compilar: `gcc subwayArgento.c -o ejecutable -lpthread`
 
 Para ejecutar: `./ejecutable`
