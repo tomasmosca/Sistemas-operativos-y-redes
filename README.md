@@ -13,7 +13,7 @@ Para este trabajo se solicitaron varias cosas, y hubieron algunas que presentaro
  - La lectura de la receta desde un archivo
  - La escritura de la salida de competencia en un archivo
 
-### Solución a los problemas
+### Solución de los problemas
 #### Sincronización de los hilos
 El problema estaba en que varios acciones se realizaban a la misma vez y había veces en que la impresión de las acciones no era en el orden correcto, esto se soluciono al crear el wait para cada función y la señal a la siguiente función y de esta forma se mantuvo un orden:
 ``` c
