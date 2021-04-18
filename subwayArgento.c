@@ -417,13 +417,13 @@ int main ()
 
    rc = pthread_create(&equipo3,
 	                       NULL,
-				               ejecutarReceta,
-				               equipoNombre3);
+				     ejecutarReceta,
+				     equipoNombre3);
 
    rc = pthread_create(&equipo4,
 	                      NULL,
-				              ejecutarReceta,
-				              equipoNombre4);
+				     ejecutarReceta,
+				     equipoNombre4);
 
    if (rc){
        printf("Error:unable to create thread, %d \n", rc);
