@@ -1,6 +1,8 @@
 # SOR-Semáforos-1S-2021
 Trabajo Práctico Semáforos primer semestre año 2021
+
 Universidad Nacional de General Sarmiento
+
 Alumno: Tomás Moscarelli
 
 ### Introducción
