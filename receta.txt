@@ -1,0 +1,9 @@
+cortar:ajo,perejil.
+mezclar:ajo,perejil,huevo.
+salar:mezcla.
+agregar carne:mezcla.
+empanar:carne mezclada.
+cocinar milanesa:carne mezclada.
+hornear pan:pan.
+cortar extras:lechuga,tomate,cebolla,pepino.
+armar sandwich:pan,lechuga,tomate,cebolla,pepino,milanesa.
